@@ -27,6 +27,10 @@ hr {
   margin: 4em;
 }
 
+blockquote {
+  margin: 3em 0;
+}
+
 .container {
   max-width: 70.0rem;
 }
@@ -35,27 +39,33 @@ a.navigation-title {
   display: block;
   width: 100%;
   font-size: 1.4rem;
+  position: absolute;
+  left: 0;
+  padding-left: 2rem;
 }
 a.navigation-title:after {
   content: '';
 }
 
+.list ul li {
+  margin-bottom: 2em;
+}
+
 .list ul li span {
   width: auto;
-}
-.list ul li a {
-  display: inline-block;
+  text-align: left;
+  display: block;
 }
 
 @media only screen and (min-width: 768px) {
-  a.navigation-title {
-    position: absolute;
-    left: 2rem;
-  }
   .list ul li span {
     width: 20rem;
+    text-align: right;
+    display: inline-block;
   }
   .list ul li a {
-    display: inline;
+    display: inline-block;
+    max-width: calc(100% - 23rem);
+    vertical-align: top;
   }
 }
